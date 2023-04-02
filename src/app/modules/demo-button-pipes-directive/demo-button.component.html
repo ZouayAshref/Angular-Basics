@@ -1,0 +1,16 @@
+<div>
+  <div>
+    <input appDigitOnly type="text" [(ngModel)]="notFormattedNumber" />
+
+    <app-button
+      [numberToFormat]="notFormattedNumber"
+      (onClick)="getFormattedNumber($event)"
+    >
+      <p>click to show result</p>
+    </app-button>
+
+    <div class="col" [hidden]="!show">
+      <p>{{msg | uppercase}} {{formattedNumber | thousandSeparator}}</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,2 @@
+<h3> Moyenne de mes enfants {{ moyenne }} </h3>
+<app-child-output *ngFor="let child of children" [nom]="child" (message)="computeAvg($event)"></app-child-output>
